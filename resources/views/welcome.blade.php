@@ -125,6 +125,20 @@
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
+                    <div>
+                     <h2>Teste com Rotas:</h2>
+                     <form action="/contato" method="post">
+                        {{ csrf_field() }}
+                        <input type="text" name="nome" placeholder="Nome / POST">
+                        <button>Enviar</button>
+                     </form>
+                     <form action="/contato" method="post">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="_method" value="put">
+                        <input type="text" name="nome" placeholder="Nome / PUT">
+                        <button>Enviar</button>
+                     </form>
+                    </div>
                 </div>
             </div>
         </div>
